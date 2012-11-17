@@ -14,25 +14,53 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BB641395
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore.Specs", "MvcMusicStore.specs\MvcMusicStore.Specs.csproj", "{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\..\..\Development\WatiN\2.1\source\src\Core\Core.csproj", "{217E2D34-F6DF-431B-AC5A-B368F481A530}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AutomatedDebug|Any CPU = AutomatedDebug|Any CPU
+		Debug (.Net 4.0)|Any CPU = Debug (.Net 4.0)|Any CPU
 		Debug|Any CPU = Debug|Any CPU
+		Release (.Net 4.0)|Any CPU = Release (.Net 4.0)|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2C38EE9-01B7-4929-B7E9-086077D1AB58}.AutomatedDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C38EE9-01B7-4929-B7E9-086077D1AB58}.AutomatedDebug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C38EE9-01B7-4929-B7E9-086077D1AB58}.Debug (.Net 4.0)|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C38EE9-01B7-4929-B7E9-086077D1AB58}.Debug (.Net 4.0)|Any CPU.Build.0 = Debug|Any CPU
 		{C2C38EE9-01B7-4929-B7E9-086077D1AB58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2C38EE9-01B7-4929-B7E9-086077D1AB58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C38EE9-01B7-4929-B7E9-086077D1AB58}.Release (.Net 4.0)|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C38EE9-01B7-4929-B7E9-086077D1AB58}.Release (.Net 4.0)|Any CPU.Build.0 = Release|Any CPU
 		{C2C38EE9-01B7-4929-B7E9-086077D1AB58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2C38EE9-01B7-4929-B7E9-086077D1AB58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}.AutomatedDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}.AutomatedDebug|Any CPU.Build.0 = Debug|Any CPU
+		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}.Debug (.Net 4.0)|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}.Debug (.Net 4.0)|Any CPU.Build.0 = Debug|Any CPU
 		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}.Release (.Net 4.0)|Any CPU.ActiveCfg = Release|Any CPU
+		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}.Release (.Net 4.0)|Any CPU.Build.0 = Release|Any CPU
 		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217E2D34-F6DF-431B-AC5A-B368F481A530}.AutomatedDebug|Any CPU.ActiveCfg = AutomatedDebug|Any CPU
+		{217E2D34-F6DF-431B-AC5A-B368F481A530}.AutomatedDebug|Any CPU.Build.0 = AutomatedDebug|Any CPU
+		{217E2D34-F6DF-431B-AC5A-B368F481A530}.Debug (.Net 4.0)|Any CPU.ActiveCfg = Debug (.Net 4.0)|Any CPU
+		{217E2D34-F6DF-431B-AC5A-B368F481A530}.Debug (.Net 4.0)|Any CPU.Build.0 = Debug (.Net 4.0)|Any CPU
+		{217E2D34-F6DF-431B-AC5A-B368F481A530}.Debug|Any CPU.ActiveCfg = AutomatedDebug|Any CPU
+		{217E2D34-F6DF-431B-AC5A-B368F481A530}.Debug|Any CPU.Build.0 = AutomatedDebug|Any CPU
+		{217E2D34-F6DF-431B-AC5A-B368F481A530}.Release (.Net 4.0)|Any CPU.ActiveCfg = Release (.Net 4.0)|Any CPU
+		{217E2D34-F6DF-431B-AC5A-B368F481A530}.Release (.Net 4.0)|Any CPU.Build.0 = Release (.Net 4.0)|Any CPU
+		{217E2D34-F6DF-431B-AC5A-B368F481A530}.Release|Any CPU.ActiveCfg = Release (.Net 4.0)|Any CPU
+		{217E2D34-F6DF-431B-AC5A-B368F481A530}.Release|Any CPU.Build.0 = Release (.Net 4.0)|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1C9E56E0-C01B-4AA6-93B0-976DD8FA40FE} = {BB641395-EDD6-4072-8230-2A000DFCE247}
+		{217E2D34-F6DF-431B-AC5A-B368F481A530} = {BB641395-EDD6-4072-8230-2A000DFCE247}
 	EndGlobalSection
 EndGlobal
