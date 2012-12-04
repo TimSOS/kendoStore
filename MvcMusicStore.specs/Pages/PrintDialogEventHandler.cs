@@ -7,10 +7,10 @@ using WatiN.Core.DialogHandlers;
 using WatiN.Core.Native.Windows;
 
 namespace MvcMusicStore.Specs.Pages {
-	internal class PrintDialogEventHandler : PrintDialogHandler {
+	public class PrintDialogEventHandler : PrintDialogHandler {
 		public event EventHandler PrintDialogHandled;
 
-		public PrintDialogEventHandler(PrintDialogHandler.ButtonsEnum buttonToPush) : base(buttonToPush) {}
+		public PrintDialogEventHandler() : base(PrintDialogHandler.ButtonsEnum.Cancel) {}
 
 		public override bool HandleDialog(Window window) {
 			bool success = base.HandleDialog(window);
@@ -21,5 +21,15 @@ namespace MvcMusicStore.Specs.Pages {
 
 			return success;
 		}
+
+		//public override bool CanHandleDialog(Window window) {
+		//	bool result = base.CanHandleDialog(window);
+		//	return result;
+		//}
+
+		//public override bool CanHandleDialog(Window window, IntPtr mainWindowHwnd) {
+		//	bool result = base.CanHandleDialog(window, mainWindowHwnd);
+		//	return result;
+		//}
 	}
 }

@@ -1,30 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
+
 using WatiN.Core;
-using WatiN.Core.DialogHandlers;
+using WatiN.Core.Native.Windows;
+using WatiN.Core.Native.InternetExplorer;
 
 namespace MvcMusicStore.Specs.Pages {
 	[Page(UrlRegex = "/ShoppingCart")]
 	internal class ShoppingCartPage : Page {
 		private bool _wasPrinted = false;
+		private PrintDialogEventHandler handler;
 
 		[FindBy(Id = "printLink")]
 		private Link PrintLink { get; set; }
 
-		public void PrintCart() {
-			//WebBrowser.Current.DialogWatcher.CloseUnhandledDialogs = true;
-			//PrintDialogEventHandler handler = new PrintDialogEventHandler(PrintDialogHandler.ButtonsEnum.Cancel);
-			//handler.PrintDialogHandled += PrintDialogHandled;
-			//using (new UseDialogOnce(WebBrowser.Current.DialogWatcher, handler)) {
-			PrintDialogHandler handler = new PrintDialogHandler(PrintDialogHandler.ButtonsEnum.Cancel);
+		protected override void InitializeContents() {
+			base.InitializeContents();
+			
+			handler = new PrintDialogEventHandler();
+			handler.PrintDialogHandled += PrintDialogHandled;
 			WebBrowser.Current.DialogWatcher.Add(handler);
-				PrintLink.Click();
-			//}
+			//WebBrowser.Current.AddDialogHandler(handler);
+		}
 
-				WebBrowser.Current.WaitForComplete();
+		public void PrintCart() {
+			PrintLink.Click();
+			Thread.Sleep(1000);
+
+			WindowsEnumerator we = new WindowsEnumerator();
+			Window printDialog = we.GetChildWindows(IntPtr.Zero, "#32770").FirstOrDefault(w => w.Title == "Print");
+			if (printDialog != null) {
+				WebBrowser.Current.DialogWatcher.HandleWindow(printDialog);
+				WebBrowser.Current.DialogWatcher.Remove(handler);
+			}
 		}
 
 		private void PrintDialogHandled(object sender, EventArgs e) {
