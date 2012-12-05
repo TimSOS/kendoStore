@@ -1,7 +1,9 @@
 ﻿using System;
-using MvcMusicStore.Specs.Pages;
+
 using NUnit.Framework;
 using TechTalk.SpecFlow;
+
+using MvcMusicStore.Specs.Pages;
 
 namespace MvcMusicStore.Specs.Home.Steps
 {
