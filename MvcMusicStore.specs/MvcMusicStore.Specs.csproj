@@ -65,6 +65,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Home\Navigation.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Navigation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Steps\NavigationSteps.cs" />
+    <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\PrintDialogEventHandler.cs" />
     <Compile Include="Pages\ShoppingCartPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,12 +80,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Printing.feature</DependentUpon>
     </Compile>
-    <Compile Include="ShoppingCart\PrintingSteps.cs" />
+    <Compile Include="ShoppingCart\Steps\PrintingSteps.cs" />
     <Compile Include="SpecFlowNUnitExtension.cs" />
     <Compile Include="SpecHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Home\Navigation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Navigation.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
     <None Include="ShoppingCart\Printing.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
