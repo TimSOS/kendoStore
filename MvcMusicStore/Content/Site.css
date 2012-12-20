@@ -82,14 +82,14 @@
 	text-align: center;
 	color: #a33636;
 }
-	
-#genre-chart a:link, #genre-chart a:visited {
-	color: #a33636;
-}
 
-#genre-chart a:hover {
-	color: #a86464;
-}
+	#genre-chart a:link, #genre-chart a:visited {
+		color: #a33636;
+	}
+
+	#genre-chart a:hover {
+		color: #a86464;
+	}
 
 .selector {
 	background: #EEE;
@@ -130,3 +130,26 @@
 .k-calendar .past {
 	color: #eee;
 }
+
+.demo-note {
+	display: block;
+	font-size: .9em;
+	font-style: italic;
+	color: #999;
+	margin-bottom: 4px;
+	padding-left: 4px;
+	text-indent: -18px;
+	margin-left: 18px;
+}
+
+	.demo-note:before {
+		content: "*";
+		font-size: 2em;
+		font-style: italic;
+		color: #CE6A54;
+	}
+
+	.demo-note.demo-graph-note {
+		float: right;
+		width: 300px;
+	}

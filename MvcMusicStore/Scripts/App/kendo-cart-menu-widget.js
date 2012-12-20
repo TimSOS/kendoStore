@@ -66,7 +66,7 @@
 
         _animate_bg: function (ele, from, anim) {
             from -= .05;
-            ele.css("background-color", "rgba(251, 176, 59, " + from + ")");
+            ele.css("background-color", "rgba(103, 103, 103, " + from + ")");
             if (from > 0) {
                 setTimeout(function () { anim(ele, from, anim); }, 30);
             } else {
