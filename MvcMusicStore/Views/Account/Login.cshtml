@@ -4,43 +4,39 @@
     ViewBag.Title = "Log in";
 }
 
-<section class="demo-information">
+<aside class="demo-information">
     <p>For demonstration purposes, the "administrative" login for the music store is:</p>
-     <p>Username: Owner</p>
+    <p>Username: Owner</p>
     <p>Password: p@ssword123</p>
-</section>
+</aside>
 
 <h3>@ViewBag.Title</h3>
 
-<section id="loginForm" class="login">
-@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+<div id="loginForm" class="login">
+    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
 
-        <ul>
-            <li>
-                @Html.LabelFor(m => m.UserName)
+        <ul><li>@Html.LabelFor(m => m.UserName)
                 @Html.TextBoxFor(m => m.UserName)
                 @Html.ValidationMessageFor(m => m.UserName)
             </li>
-            <li>
-                @Html.LabelFor(m => m.Password)
+            <li>@Html.LabelFor(m => m.Password)
                 @Html.PasswordFor(m => m.Password)
                 @Html.ValidationMessageFor(m => m.Password)
             </li>
-            <li>
-                @Html.CheckBoxFor(m => m.RememberMe)
+            <li>@Html.CheckBoxFor(m => m.RememberMe)
                 @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
             </li>
         </ul>
       
         <input type="submit" value="Log in" class="k-button" />
     
-    <p class="login-small">
-        @Html.ActionLink("Register", "Register") if you don't have an account.
-    </p>
-}
-</section>
+        <p class="login-small">
+            @Html.ActionLink("Register", "Register") if you don't have an account.
+        </p>
+    }
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

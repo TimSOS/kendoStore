@@ -8,5 +8,5 @@
         }
     });
 
-    kendo.bind($("#body"), viewModel);
+    kendo.bind($("#main"), viewModel);
 })(jQuery, kendo, store);
